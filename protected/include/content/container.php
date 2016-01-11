@@ -1,0 +1,81 @@
+<?php
+
+function print_container()
+{
+  echo "<div class=\"container\">";
+  $NoRemainingContent = FALSE;
+  switch($_SERVER['REQUEST_METHOD'])
+  {
+    case('POST'):
+      if(isset($_POST['submitCreateAccount']))
+      {
+        site_include(DIR_NOSESSION.'submit-createaccount.php');
+      }
+      if(isset($_POST['submitResetPassword']))
+      {
+        site_include(DIR_NOSESSION.'submit-resetpassword.php');
+      }
+      if(isset($_POST['submitLogIn']))
+      {
+        site_include(DIR_NOSESSION.'submit-login.php');
+      }
+      if(isset($_POST['submitChangePassword']))
+      {
+        site_include(DIR_NOSESSION.'submit-changepassword.php');
+      }
+      header("Location: {$_SERVER['REQUEST_URI']}");
+      exit();
+      break;
+    case('GET'):
+      if(isset($_SESSION['Copyright']))
+      {
+        unset($_SESSION['Copyright']);
+        site_include(DIR_READY.'copyright.php');
+        Config::write('site.includenone',TRUE);
+      }
+      if(isset($_SESSION['submitCreateAccountHello']))
+      {
+        unset($_SESSION['submitCreateAccountHello']);
+        site_include(DIR_NOSESSION.'submit-createaccount-hello.php');
+      }
+      if(isset($_SESSION['submitResetPasswordHello']))
+      {
+        unset($_SESSION['submitResetPasswordHello']);
+        site_include(DIR_NOSESSION.'submit-resetpassword-hello.php');
+      }
+      if(isset($_SESSION['submitChangePasswordMessage']))
+      {
+        unset($_SESSION['submitChangePasswordMessage']);
+        site_include(DIR_NOSESSION.'submit-changepassword-hello.php');
+      }
+      break;
+  }
+  if(isset($_SESSION['ForceChangePassword']))
+  {
+    site_include(DIR_NOSESSION.'form-changepassword.php');
+    // Retain $_SESSION['ForceChangePassword'] for use in 'submit-changepassword.php'
+    unset($_SESSION['LoggedIn']);
+  }
+  else
+  {
+    if(isset($_SESSION['LoggedIn']))
+    {
+      if($_SESSION['LoggedIn'])
+      {
+        site_include(DIR_SESSION.'session.php');
+      }
+      else
+      {
+        site_include(DIR_NOSESSION.'submit-login-error.php');
+        superendsession();
+        site_include(DIR_NOSESSION.'nosession.php');
+        }
+    }
+    else
+    {
+      superendsession();
+      site_include(DIR_NOSESSION.'nosession.php');
+    }
+  }
+  echo "</div>";
+}

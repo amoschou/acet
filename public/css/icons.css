@@ -1,0 +1,117 @@
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fnt/icomoon/icomoon-07b5ed0d9df1c0806d072f3d98905c2ea729ab42.eot?a9ib3s');
+    src: url('/fnt/icomoon/icomoon-07b5ed0d9df1c0806d072f3d98905c2ea729ab42.eot?#iefixa9ib3s') format('embedded-opentype'), url('/fnt/icomoon/icomoon-9b6acaedc9bcddf00100de1d165c8a80cc157e1c.woff?a9ib3s') format('woff'), url('/fnt/icomoon/icomoon-35e8a73215087035dc65451efc9dc69d469e78bb.ttf?a9ib3s') format('truetype'), url('/fnt/icomoon/icomoon-09764b6ed2c71476d96c261baa9a062aa42058ea.svg?a9ib3s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-aboriginal-and-torres-strait-islander-histories-and-cultures:before {
+    content: ""
+}
+
+.icon-aboriginal-and-torres-strait-islander-histories-and-cultures_Black:before {
+    content: ""
+}
+
+.icon-asia-and-australias-engagement-with-asia:before {
+    content: ""
+}
+
+.icon-asia-and-australias-engagement-with-asia_Black:before {
+    content: ""
+}
+
+.icon-critical-and-creative-thinking:before {
+    content: ""
+}
+
+.icon-critical-and-creative-thinking_Black:before {
+    content: ""
+}
+
+.icon-ethical-understanding:before {
+    content: ""
+}
+
+.icon-ethical-understanding_Black:before {
+    content: ""
+}
+
+.icon-information-and-communication-technology-ict-capability:before, .icon-information-and-communication-technology-capability:before {
+    content: ""
+}
+
+.icon-information-and-communication-technology-ict-capability_Black:before {
+    content: ""
+}
+
+.icon-intercultural-understanding:before {
+    content: ""
+}
+
+.icon-intercultural-understanding_Black:before {
+    content: ""
+}
+
+.icon-listening:before {
+    content: ""
+}
+
+.icon-literacy:before {
+    content: ""
+}
+
+.icon-literacy_Black:before {
+    content: ""
+}
+
+.icon-numeracy:before {
+    content: ""
+}
+
+.icon-numeracy_Black:before {
+    content: ""
+}
+
+.icon-personal-and-social-capability:before {
+    content: ""
+}
+
+.icon-personal-and-social-capability_Black:before {
+    content: ""
+}
+
+.icon-reading:before {
+    content: ""
+}
+
+.icon-speaking:before {
+    content: ""
+}
+
+.icon-sustainability:before {
+    content: ""
+}
+
+.icon-sustainability_Black:before {
+    content: ""
+}
+
+.icon-writing:before {
+    content: ""
+}
+
